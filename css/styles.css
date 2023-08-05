@@ -826,8 +826,11 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.input-link-link {
+  display: inline-flex;
+}
 .input-link {
-  color: #4d5ae5;
+  color: var(--iris, #4d5ae5);
 }
 .input-form-footer {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
