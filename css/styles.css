@@ -809,6 +809,9 @@ img {
   border: none;
   fill: #f4f4fd;
 }
+.modal-checkbox:checked {
+  background-color: var(--iris, #4d5ae5);
+}
 .footer-form-input {
   display: flex;
   gap: 24px;
