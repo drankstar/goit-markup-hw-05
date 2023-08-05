@@ -620,7 +620,7 @@ img {
 }
 .modal {
   position: absolute;
-  padding: 0 24px;
+  padding: 72px 24px 24px 24px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleX(1);
@@ -681,7 +681,6 @@ img {
 }
 .modal-titel {
   margin-bottom: 16px;
-  margin-top: 72px;
   color: var(--navyblue, #2e2f42);
   text-align: center;
   font-family: Roboto;
@@ -706,7 +705,7 @@ img {
   padding-left: 38px;
   padding-right: 16px;
   outline: transparent;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
   border-color: #4d5ae5;
@@ -716,12 +715,12 @@ img {
 }
 .modal-label {
   display: block;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   color: #8e8f99;
   font-family: Roboto;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .icon-modal-wrap {
   position: relative;
@@ -735,6 +734,12 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-comment {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  color: rgba(46, 47, 66, 0.4);
+  letter-spacing: 0.04em;
+  line-height: 1.17;
+  font-size: 12px;
   width: 360px;
   height: 120px;
   border-radius: 4px;
@@ -746,22 +751,18 @@ img {
 .modal-comment:focus {
   border-color: #4d5ae5;
 }
-.modal-comment::placeholder {
-  color: rgba(46, 47, 66, 0.4);
-  font-family: Roboto;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-}
+
 .fild-modal {
-  margin-bottom: 0;
+  margin-bottom: 24px;
+}
+.fild-modal-modal {
+  margin-bottom: 16px;
 }
 .input-btn {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 16px 32px;
   min-width: 169px;
   height: 56px;
-  margin-top: 24px;
   border: none;
   cursor: pointer;
   display: block;
@@ -778,18 +779,19 @@ img {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .modal-check-text {
+  color: #8e8f99;
   align-items: center;
   display: flex;
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 .modal-link {
   color: #4d5ae5;
 }
 .modal-checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
@@ -798,11 +800,18 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-check:checked + .modal-check-text span {
-  background-color: #4d5ae5;
+  background-color: var(--iris #4d5ae5);
   border: none;
   fill: #f4f4fd;
+}
+.footer-form-input {
+  display: flex;
+  gap: 24px;
 }
 .footer-input {
   margin-left: 80px;
@@ -817,40 +826,45 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+.input-link {
+  color: #4d5ae5;
+}
 .input-form-footer {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   padding-left: 16px;
   background-color: transparent;
   width: 264px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .input-form-footer::placeholder {
   color: #fff;
-  font-family: Roboto;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.03em;
 }
 .footer-input-btn {
+  cursor: pointer;
+  min-width: 165px;
   color: #fff;
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.02em;
-  margin-left: 24px;
+  letter-spacing: 0.04em;
   border: none;
-  display: inline-flex;
+  display: flex;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   border-radius: 4px;
   background: var(--iris, #4d5ae5);
 }
 .btn-icon-footer {
+  margin-left: 16px;
   fill: #fff;
 }
