@@ -791,6 +791,7 @@ img {
   color: #4d5ae5;
 }
 .modal-checkbox {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
