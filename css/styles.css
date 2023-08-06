@@ -803,6 +803,9 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-check:focus + .modal-check-text .modal-checkbox {
+  border-color: #404bbf;
+}
 
 .modal-check:checked + .modal-check-text .modal-checkbox {
   background-color: var(--ocean);
